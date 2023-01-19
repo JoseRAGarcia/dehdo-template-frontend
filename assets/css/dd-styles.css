@@ -1,0 +1,51 @@
+/* :root {    
+    --dd-primary: #B300B3;
+    --dd-secondary: #ccc;
+    --dd-warning: #f2c037;
+    --dd-light: #EAEFF1;    
+} */
+
+/* body {
+     background: var(--dd-light);
+ } */
+
+/* Background color classes */
+.bg-dd-primary {
+    background: var(--dd-primary) !important;
+}
+.bg-dd-secondary {
+    background: var(--dd-secondary) !important;
+}
+.bg-dd-light {
+    background: var(--dd-light) !important;
+}
+.bg-dd-warning {
+    background: var(--dd-warning) !important;
+}
+
+/* Text color classes */
+.text-dd-primary {
+    color: var(--dd-primary) !important;
+}
+.text-dd-secondary {
+    color: var(--dd-secondary) !important;
+}
+.text-dd-light {
+    color: var(--dd-light) !important;
+}
+.text-dd-warning {
+    color: var(--dd-warning) !important;
+}
+ 
+/* Content classes */
+.dd-content {
+    padding: 120px 20px 20px 20px !important;
+}
+  
+.dd-card {
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    padding: 15px;
+    margin-bottom: 20px;
+}
