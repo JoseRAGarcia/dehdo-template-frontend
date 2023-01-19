@@ -1,0 +1,23 @@
+:root {
+    --dd-light: #EAEFF1;
+}
+
+body {
+    background: var(--dd-light);
+}
+
+.bg-dd-light {
+    background: var(--dd-light);
+}
+  
+.dd-content {
+    padding: 20px !important;
+}
+  
+.dd-card {
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    padding: 15px;
+    margin-bottom: 20px;
+}
