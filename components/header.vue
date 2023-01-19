@@ -10,6 +10,7 @@
           align-items-start align-items-sm-center
           p-2
         "
+        :class="{ 'header-container-mobile': breakpoint.xs }"
       >
         <nuxt-link to="/">
           <div
@@ -25,13 +26,31 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
+  mounted() {
+    window.addEventListener("scroll", this.onScroll, true);
+  },
+
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.onScroll, true);
+  },
+
   computed: {
     ...mapGetters({
       breakpoint: "window/getBreakpoint",
     }),
+  },
+
+  methods: {
+    ...mapActions({
+      changeScrollY: "layout/changeScrollY",
+    }),
+
+    onScroll() {
+      this.changeScrollY(window.scrollY);      
+    },
   },
 };
 </script>
@@ -46,6 +65,10 @@ export default {
   left: 0;
   right: 0;
   z-index: 500;
+  transition: height 0.3s;
+}
+.header-container-mobile {
+  height: 70px;
 }
 
 .logo-container {
