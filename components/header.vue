@@ -54,6 +54,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: height 0.3s, width 0.3s;
 }
 .logo-container-mobile {
   height: 50%;
