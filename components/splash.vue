@@ -1,8 +1,19 @@
 <template>
-  <div class="splash-container">
-    <b-spinner type="grow"></b-spinner>
+  <div class="splash-container bg-dd-primary" :style="!loaded && 'opacity: 1;'">
+    <b-spinner class="text-white"></b-spinner>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    loaded: {
+      type: Boolean,
+      default: false,
+    }
+  },
+};
+</script>
 
 <style scoped>
 .splash-container {
@@ -11,12 +22,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ccc;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 1000;
+  opacity: 0;
+  transition: opacity 1s;
 }
 </style>

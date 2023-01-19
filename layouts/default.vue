@@ -1,9 +1,9 @@
 <template>
   <b-container fluid>
-    <Splash v-if="!layoutReady" />
-    <Header v-show="layoutReady" />
-    <Nuxt v-show="layoutReady" />
-    <Footer v-show="layoutReady" />
+    <Splash :loaded="loaded" v-if="!layoutReady" />
+    <Header v-show="loaded" />
+    <Nuxt v-show="loaded" />
+    <Footer v-show="loaded" />
   </b-container>
 </template>
 
@@ -21,13 +21,17 @@ export default {
     });
 
     setTimeout(() => {
-      this.layoutReady = true;
+      this.loaded = true;
+      setTimeout(() => {
+        this.layoutReady = true;
+      }, 1000);
     }, 3000);
   },
 
   data() {
     return {
       layoutReady: false,
+      loaded: false,
     };
   },
 
