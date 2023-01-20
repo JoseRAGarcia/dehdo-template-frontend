@@ -4,18 +4,17 @@
       <b-col
         class="
           header-container
-          bg-white
-          shadow
           d-flex
           align-items-start align-items-sm-center
           p-2
         "
-        :class="{ 'header-container-mobile': breakpoint.xs }"
+        :class="{ 'header-container-mobile': breakpoint.xs, 'shadow': scrollY > 20 }"
+        :style="scrollY < 20 ? 'background: rgba(var(--dd-primary-rgb), 0.2);' : 'background: #fff;'"
       >
         <nuxt-link to="/">
-          <div
+          <div 
             class="logo-container"
-            :class="{ 'logo-container-mobile': breakpoint.xs }"
+            :class="{ 'logo-container-mobile': breakpoint.xs && scrollY > 20 }"
           >
             <img src="/img/dehdo-logo.png" alt="Logotipo do site" />
           </div>
@@ -40,12 +39,13 @@ export default {
   computed: {
     ...mapGetters({
       breakpoint: "window/getBreakpoint",
+      scrollY: "window/getScrollY",
     }),
   },
 
   methods: {
     ...mapActions({
-      changeScrollY: "layout/changeScrollY",
+      changeScrollY: "window/changeScrollY",
     }),
 
     onScroll() {
@@ -59,13 +59,12 @@ export default {
 .header-container {
   height: 100px;
   overflow: hidden;
-  border-bottom: 1px solid #ccc;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 500;
-  transition: height 0.3s;
+  transition: height 0.8s, background 0.8s;
 }
 .header-container-mobile {
   height: 70px;
@@ -77,7 +76,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: height 0.3s, width 0.3s;
+  transition: height 0.8s, width 0.8s;
 }
 .logo-container-mobile {
   height: 50%;

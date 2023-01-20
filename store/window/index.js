@@ -1,4 +1,5 @@
 export const state = () => ({
+    scrollY: 0,
     windowWidth: null,
     xxl: false,
     xl: false,
@@ -12,6 +13,9 @@ export const state = () => ({
 })
 
 export const mutations = {
+    SET_SCROLL_Y(state, payload) {
+        state.scrollY = payload
+    },
     SET_WINDOW_WIDTH(state, payload) {
         state.windowWidth = payload        
 
@@ -30,6 +34,9 @@ export const mutations = {
 }
 
 export const getters = {
+    getScrollY(state) {
+        return state.scrollY
+    },
     getBreakpoint(state) {
         return state
     },
@@ -42,6 +49,9 @@ export const getters = {
 }
 
 export const actions = {
+    changeScrollY({commit}, payload) {
+        commit('SET_SCROLL_Y', payload)
+    },
     changeWindowWidth({ commit }, payload) {
         commit('SET_WINDOW_WIDTH', payload)
     },
