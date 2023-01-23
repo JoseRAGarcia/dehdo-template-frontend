@@ -200,12 +200,9 @@ export default {
 .disabled-controls {
   pointer-events: none !important;
 }
-.fade-enter-active {
-  transition: opacity 1s ease;
-}
+.fade-enter-active,
 .fade-leave-active {
-  transition: opacity 1s ease;
-  position: absolute;
+  transition: opacity 1s ease-in-out;
 }
 .fade-enter,
 .fade-enter-from,

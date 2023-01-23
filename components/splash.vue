@@ -1,6 +1,6 @@
 <template>
   <div class="splash-container bg-dd-primary" :style="!loaded && 'opacity: 1;'">
-    <b-spinner class="text-white"></b-spinner>
+    <b-spinner style="color: var(--dd-primary-lighten)"></b-spinner>
   </div>
 </template>
 

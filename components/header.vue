@@ -9,7 +9,7 @@
           p-2
         "
         :class="{ 'header-container-mobile': breakpoint.xs, 'shadow': scrollY > 20 }"
-        :style="scrollY < 20 ? 'background: rgba(var(--dd-primary-rgb), 0.2);' : 'background: #fff;'"
+        :style="scrollY < 20 ? 'background: rgba(255, 255, 255, 0);' : 'background: #fff;'"
       >
         <nuxt-link to="/">
           <div 
