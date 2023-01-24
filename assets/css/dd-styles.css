@@ -36,6 +36,9 @@
 .text-dd-warning {
     color: var(--dd-warning) !important;
 }
+.text-dd-shadow {
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,1)); 
+}
  
 /* Content classes */
 .dd-content {
@@ -49,4 +52,9 @@
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
     padding: 15px;
     margin-bottom: 20px;
+}
+
+.content-title {
+    color: var(--dd-primary);
+    font-size: 2rem;
 }
