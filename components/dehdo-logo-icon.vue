@@ -28,6 +28,7 @@
   display: flex;
   align-items: baseline;
   justify-content: center;
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,1));
 }
 
 .dehdo-icon {

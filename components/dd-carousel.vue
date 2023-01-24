@@ -195,7 +195,7 @@ export default {
   right: 0;
 }
 .img-dots {
-  bottom: 0;
+  bottom: 15px;
 }
 .disabled-controls {
   pointer-events: none !important;
