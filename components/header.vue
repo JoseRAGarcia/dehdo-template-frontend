@@ -23,7 +23,10 @@
           </div>
         </nuxt-link>
 
-        <div class="main-menu d-none d-md-flex" :class="scrollY < 20 && $route.path === '/' ? 'text-dd-shadow' : 'main-menu-solid'">
+        <div class="main-menu d-none d-lg-flex" :class="scrollY < 20 && $route.path === '/' ? 'text-dd-shadow' : 'main-menu-solid'">
+          <nuxt-link to="/#quem-somos">
+            <span>Quem somos</span>
+          </nuxt-link>
           <nuxt-link to="#">
             <span>Menu Item</span>
           </nuxt-link>
@@ -37,7 +40,7 @@
             <span>Menu Item</span>
           </nuxt-link>
         </div>
-        <div class="main-menu-mobile d-flex d-md-none">
+        <div class="main-menu-mobile d-flex d-lg-none">
           <i class="bx bx-sm bx-menu" :class="scrollY < 20 && $route.path === '/' ? 'text-dd-shadow' : 'main-menu-solid'"></i>
         </div>
       </b-col>

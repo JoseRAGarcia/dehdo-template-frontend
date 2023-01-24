@@ -18,27 +18,29 @@
         </div>
       </b-col>
     </b-row>
-      
+
     <b-row>
       <b-col class="bg-white">
         <b-row>
-          <b-col class="d-none d-md-flex bg-dd-light my-4">
+          <b-col class="d-none d-lg-flex bg-dd-light my-4">
             <div class="content-img-container p-2">
-              <img
-                src="https://freesvg.org/img/Noun-project-1063.png"
-                alt=""
-              />
+              <img src="https://freesvg.org/img/Noun-project-1063.png" alt="" />
             </div>
           </b-col>
-          <b-col class="col-12 col-md-8">
-            <div class="content-text-box p-2 my-4">
+          <b-col class="col-12 col-lg-8">
+            <div class="content-text-box p-2 my-4" id="quem-somos">
               <h2 class="content-title">Quem somos</h2>
-              <p v-for="p, index in 10" :key="index">
+              <p v-for="(p, index) in 4" :key="index">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Repudiandae aperiam nostrum minima assumenda molestias
                 voluptatibus. Asperiores hic assumenda rem modi ex officiis non
                 cum quas, in animi nam reiciendis dicta!
               </p>
+              <img
+                class="content-text-box-bg d-flex d-lg-none"
+                src="https://freesvg.org/img/Noun-project-1063.png"
+                alt=""
+              />
             </div>
           </b-col>
         </b-row>
@@ -56,12 +58,6 @@ export default {
   data() {
     return {
       banners: [
-        "https://upload.wikimedia.org/wikipedia/commons/d/d7/San_Francisco_Bay_Bridge_Western_Span_at_night.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/d/d7/San_Francisco_Bay_Bridge_Western_Span_at_night.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/d/d7/San_Francisco_Bay_Bridge_Western_Span_at_night.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/d/d7/San_Francisco_Bay_Bridge_Western_Span_at_night.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/d/d7/San_Francisco_Bay_Bridge_Western_Span_at_night.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/d/d7/San_Francisco_Bay_Bridge_Western_Span_at_night.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/d/d7/San_Francisco_Bay_Bridge_Western_Span_at_night.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/9/96/Dai_Stanton%27s_home_studio_2009-03-07.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/1/11/Interpreting_Ecommerce_Website_Analytics.jpg",
@@ -99,8 +95,8 @@ export default {
 } */
 
 .content-img-container {
-  height: 500px;
-  overflow: hidden;
+  height: 400px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,8 +107,23 @@ export default {
 }
 
 .content-text-box {
-  height: 500px;
+  position: relative;
+  height: 400px;
   overflow: hidden;
+}
+.content-text-box-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-height: 50%;
+  max-width: 50%;
+  filter: opacity(0.07);
+}
+
+@media only screen and (max-width: 1200px) {
+  .content-text-box {
+    height: auto;
+  }
 }
 </style>
 
