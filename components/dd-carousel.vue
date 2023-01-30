@@ -5,10 +5,10 @@
       :style="imgContainerStyle"
       v-for="(img, index) in imgs"
       :key="index"
-      @pointerover="pauseCarousel"
-      @pointerleave="resumeCarousel"
+      @mouseover="pauseCarousel"
+      @mouseleave="resumeCarousel"
     >
-      <Transition name="fade">
+      <Transition :name="transitionEffect">
         <img
           v-if="carouselIndex === index"
           class="carousel-img"          
@@ -81,6 +81,10 @@ export default {
     imgStyle: {
       type: String,
       default: '',
+    },
+    transitionEffect: {
+      type: String,
+      default: 'slide-left',
     },
   },
   mounted() {
@@ -208,5 +212,53 @@ export default {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: transform 1s ease-in-out;
+}
+.slide-left-enter,
+.slide-left-enter-from {
+  transform: translateX(100%);
+}
+.slide-left-leave-to {
+  transform: translateX(-100%);
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: transform 1s ease-in-out;
+}
+.slide-right-enter,
+.slide-right-enter-from {
+  transform: translateX(-100%);
+}
+.slide-right-leave-to {
+  transform: translateX(100%);
+}
+
+.slide-top-enter-active,
+.slide-top-leave-active {
+  transition: transform 1s ease-in-out;
+}
+.slide-top-enter,
+.slide-top-enter-from {
+  transform: translateY(100%);
+}
+.slide-top-leave-to {
+  transform: translateY(-100%);
+}
+
+.slide-bottom-enter-active,
+.slide-bottom-leave-active {
+  transition: transform 1s ease-in-out;
+}
+.slide-bottom-enter,
+.slide-bottom-enter-from {
+  transform: translateY(-100%);
+}
+.slide-bottom-leave-to {
+  transform: translateY(100%);
 }
 </style>

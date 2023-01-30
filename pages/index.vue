@@ -6,6 +6,7 @@
           <DdCarousel
             :imgs="banners"
             :speed="10000"
+            transitionEffect="fade"
             height="100vh"
             width="100%"
             imgContainerStyle="position: fixed;"

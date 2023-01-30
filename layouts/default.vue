@@ -35,9 +35,19 @@ export default {
     };
   },
 
+  watch: {
+    $route: {
+      handler: function () {
+        this.changeShowMenuMobile(false);
+      },
+      deep: true,
+    },
+  },
+
   methods: {
     ...mapActions({
       changeWindowWidth: "window/changeWindowWidth",
+      changeShowMenuMobile: "layout/changeShowMenuMobile",
     }),
   },
 };
