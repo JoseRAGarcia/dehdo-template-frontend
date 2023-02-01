@@ -6,7 +6,7 @@
     "node": "16.x"
   },
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --port 3002",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"

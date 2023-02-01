@@ -8,7 +8,7 @@
           : 'main-menu-solid'
       "
     >
-      <nuxt-link to="/#quem-somos">
+      <nuxt-link v-if="$route.path === '/'" to="/#quem-somos">
         <span>Quem somos</span>
       </nuxt-link>
       <nuxt-link to="#">
@@ -58,7 +58,7 @@
             @click="changeShowMenuMobile(false)"
           ></i>
         </div>
-        <nuxt-link to="/#quem-somos">
+        <nuxt-link v-if="$route.path === '/'" :to="{path: '/', hash:'#quem-somos'}">
           <span>Quem somos</span>
         </nuxt-link>
         <nuxt-link to="#">
