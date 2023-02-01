@@ -2,15 +2,13 @@
   <header>
     <b-row>
       <b-col
-        class="header-container"
+        class="header-container shadow"
         :class="
-          scrollY > 20
-            ? 'header-container-solid shadow'
-            : 'align-items-sm-center'
+          scrollY > 20 ? 'header-container-solid' : 'align-items-sm-center'
         "
         :style="
           scrollY < 20 && $route.path === '/'
-            ? 'background: rgba(255, 255, 255, 0);'
+            ? 'background: rgba(255, 255, 255, 0); box-shadow: 0 0 0 rgba(0,0,0,0) !important;'
             : 'background: #fff;'
         "
       >

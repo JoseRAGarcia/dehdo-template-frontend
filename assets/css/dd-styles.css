@@ -5,10 +5,6 @@
     --dd-light: #EAEFF1;    
 } */
 
-/* body {
-     background: var(--dd-light);
- } */
-
 /* Background color classes */
 .bg-dd-primary {
     background: var(--dd-primary) !important;
@@ -44,6 +40,12 @@
 .dd-content {
     padding: 120px 20px 20px 20px !important;
     min-height: calc(100vh - 70px);
+}
+
+.dd-admin-content {
+    margin-top: 70px;
+    padding: 20px 20px 20px 20px !important;
+    min-height: calc(100vh - 140px);
 }
   
 .dd-card {
