@@ -10,6 +10,7 @@
     >
       <Transition :name="transitionEffect">
         <img
+          loading="lazy"
           v-if="carouselIndex === index"
           class="carousel-img"          
           :src="img"

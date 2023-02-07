@@ -9,6 +9,7 @@
           <nuxt-link v-show="!breakpoint.sm" to="/admin-management">
             <div class="logo-container bg-white shadow">
               <img
+                loading="lazy"
                 class="text-dd-shadow"
                 :src="
                   adminMenuCollapsed || breakpoint.sm
@@ -26,7 +27,6 @@
                 <i class="bx bx-xs bx-file"></i>
                 Cadastro
               </div>
-
             </div>
             <b-collapse id="menu-collapse-1">
               <nuxt-link
