@@ -17,7 +17,7 @@
             class="logo-container mt-2"
             :class="scrollY > 20 ? 'logo-container-solid' : 'text-dd-shadow'"
           >
-            <img src="/img/dehdo-logo.png" alt="Logotipo do site" />
+            <img loading="lazy" src="/img/dehdo-logo.png" alt="Logotipo do site" />
           </div>
         </nuxt-link>
 

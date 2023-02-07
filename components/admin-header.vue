@@ -21,7 +21,7 @@
               </div>
             </nuxt-link>
             <i
-              class="bx bx-md bx-menu collapse-menu ml-2"
+              class="bx bx-sm bx-menu collapse-menu ml-2"
               @click="changeAdminMenuCollapsed(!adminMenuCollapsed)"
             ></i>
           </div>
