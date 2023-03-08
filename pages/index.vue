@@ -25,7 +25,7 @@
         <b-row>
           <b-col class="d-none d-lg-flex bg-dd-light my-4">
             <div class="content-img-container p-2">
-              <img src="https://freesvg.org/img/Noun-project-1063.png" alt="" />
+              <img loading="lazy" src="https://freesvg.org/img/Noun-project-1063.png" alt="" />
             </div>
           </b-col>
           <b-col class="col-12 col-lg-8">

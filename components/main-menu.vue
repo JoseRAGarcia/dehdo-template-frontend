@@ -11,17 +11,11 @@
       <nuxt-link v-if="$route.path === '/'" to="/#quem-somos">
         <span>Quem somos</span>
       </nuxt-link>
-      <nuxt-link to="#">
-        <span>Menu Item</span>
+      <nuxt-link v-else to="/">
+        <span>Home</span>
       </nuxt-link>
-      <nuxt-link to="#/#">
-        <span>Menu Item</span>
-      </nuxt-link>
-      <nuxt-link to="#/#/#">
-        <span>Menu Item</span>
-      </nuxt-link>
-      <nuxt-link to="#/#/#/#">
-        <span>Menu Item</span>
+      <nuxt-link v-for="item in menu" :key="item.id" :to="item.link">
+        {{ item.label }}
       </nuxt-link>
     </div>
     <div class="main-menu-mobile d-flex d-lg-none">
@@ -58,20 +52,17 @@
             @click="changeShowMenuMobile(false)"
           ></i>
         </div>
-        <nuxt-link v-if="$route.path === '/'" :to="{path: '/', hash:'#quem-somos'}">
+        <nuxt-link
+          v-if="$route.path === '/'"
+          :to="{ path: '/', hash: '#quem-somos' }"
+        >
           <span>Quem somos</span>
         </nuxt-link>
-        <nuxt-link to="#">
-          <span>Menu Item</span>
+        <nuxt-link v-else to="/">
+          <span>Home</span>
         </nuxt-link>
-        <nuxt-link to="#/#">
-          <span>Menu Item</span>
-        </nuxt-link>
-        <nuxt-link to="#/#/#">
-          <span>Menu Item</span>
-        </nuxt-link>
-        <nuxt-link to="#/#/#/#">
-          <span>Menu Item</span>
+        <nuxt-link v-for="item in menu" :key="item.id" :to="item.link">
+          {{ item.label }}
         </nuxt-link>
       </div>
     </div>
@@ -81,7 +72,15 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 
+import menu from "./menu";
+
 export default {
+  data() {
+    return {
+      menu,
+    };
+  },
+
   computed: {
     ...mapGetters({
       scrollY: "window/getScrollY",
@@ -110,6 +109,7 @@ export default {
 
 .main-menu a {
   height: 100%;
+  width: 130px;
   padding: 0 15px 0;
   display: flex;
   align-items: center;
@@ -120,10 +120,10 @@ export default {
   transition: all 0.5s;
 }
 
-.main-menu a:not(.nuxt-link-active):hover {
+.main-menu a:not(.nuxt-link-exact-active):hover {
   color: var(--dd-primary-lighten);
 }
-.main-menu .nuxt-link-active {
+.main-menu .nuxt-link-exact-active {
   color: var(--dd-primary);
 }
 
@@ -138,12 +138,12 @@ export default {
   color: var(--dd-primary);
   transition: color 0.5s, padding 0.5s;
 }
-.main-menu-solid a:not(.nuxt-link-active):hover {
+.main-menu-solid a:not(.nuxt-link-exact-active):hover {
   color: #fff;
   background: var(--dd-primary);
   padding: 0 15px 20px;
 }
-.main-menu-solid .nuxt-link-active {
+.main-menu-solid .nuxt-link-exact-active {
   background: #fff;
   background: var(--dd-light);
 }
@@ -194,12 +194,12 @@ export default {
   color: var(--dd-primary);
   transition: color 0.5s, padding 0.5s;
 }
-.main-menu-mobile-collapse a:not(.nuxt-link-active):hover {
+.main-menu-mobile-collapse a:not(.nuxt-link-exact-active):hover {
   color: #fff;
   background: var(--dd-primary);
   padding: 0 15px 20px;
 }
-.main-menu-mobile-collapse .nuxt-link-active {
+.main-menu-mobile-collapse .nuxt-link-exact-active {
   background: #fff;
   background: var(--dd-light);
 }

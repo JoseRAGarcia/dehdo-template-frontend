@@ -4,10 +4,10 @@
       <b-col
         class="header-container shadow"
         :class="
-          scrollY > 20 ? 'header-container-solid' : 'align-items-sm-center'
+          isMinHeader ? 'header-container-solid' : 'align-items-sm-center'
         "
         :style="
-          scrollY < 20 && $route.path === '/'
+          !isMinHeader && $route.path === '/'
             ? 'background: rgba(255, 255, 255, 0); box-shadow: 0 0 0 rgba(0,0,0,0) !important;'
             : 'background: #fff;'
         "
@@ -15,7 +15,7 @@
         <nuxt-link to="/">
           <div
             class="logo-container mt-2"
-            :class="scrollY > 20 ? 'logo-container-solid' : 'text-dd-shadow'"
+            :class="isMinHeader ? 'logo-container-solid' : 'text-dd-shadow'"
           >
             <img loading="lazy" src="/img/dehdo-logo.png" alt="Logotipo do site" />
           </div>
@@ -44,6 +44,10 @@ export default {
       breakpoint: "window/getBreakpoint",
       scrollY: "window/getScrollY",
     }),
+
+    isMinHeader() {
+      return this.$route.path === '/' ? this.scrollY > 20 : true
+    },
   },
 
   methods: {
