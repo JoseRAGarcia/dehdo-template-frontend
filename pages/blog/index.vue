@@ -9,16 +9,16 @@
           <img
             class="blog-banner"
             loading="lazy"
-            src="https://upload.wikimedia.org/wikipedia/commons/3/36/FLSP_Winter_Wildlife_Blog_6_%2825046284206%29.jpg"
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Cartoon_-_Waiting_for_snow.jpg"
             alt=""
           />
-          <h1 class="blog-title text-dd-shadow text-dd-light">Blog</h1>
+          <h1 class="blog-title text-dd-shadow text-dd-light p-2 rounded">Blog</h1>
         </div>
       </b-col>
     </b-row>
     <b-container style="min-height: calc(100vh - 440px)">
       <b-row>
-        <b-col class="text-justify">
+        <b-col class="text-left">
           <div class="my-4">
             <h2 class="content-title">
               Aqui você poderá manter seus clientes atualizados sobre seus

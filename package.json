@@ -6,7 +6,8 @@
     "node": "16.x"
   },
   "scripts": {
-    "dev": "nuxt --port 3002",
+    "serve": "nuxt --port 3002",
+    "dev": "node --openssl-legacy-provider node_modules/nuxt/bin/nuxt.js --port 3002",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"

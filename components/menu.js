@@ -11,7 +11,7 @@ export default [
     },
     {
         id: 3,
-        label: "Menu item",
+        label: "Agendamento",
         link: "#/#/#",
     },
     {

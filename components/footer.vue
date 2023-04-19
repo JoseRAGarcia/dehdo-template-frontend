@@ -1,7 +1,10 @@
 <template>
   <footer>
     <b-row>
-      <b-col class="footer-container">        
+      <b-col style="height: 100px; background: #fff;"></b-col>
+    </b-row>
+    <b-row>
+      <b-col class="footer-container bg-dd-primary">        
       </b-col>
     </b-row>
   </footer>
@@ -14,9 +17,7 @@ export default {};
 <style scoped>
 .footer-container {
   height: 70px;
-  background: var(--dd-primary-lighten);
   overflow: hidden;
-  border-top: 1px solid #ccc;
   position: relative;
   bottom: 0;
   left: 0;
