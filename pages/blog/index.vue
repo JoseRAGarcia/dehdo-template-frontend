@@ -9,7 +9,7 @@
           <img
             class="blog-banner"
             loading="lazy"
-            src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Cartoon_-_Waiting_for_snow.jpg"
+            src="/img/blog/bruxa.jpg"
             alt=""
           />
           <h1 class="blog-title text-dd-shadow text-dd-light p-2 rounded">Blog</h1>

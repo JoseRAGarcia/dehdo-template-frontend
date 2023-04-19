@@ -62,7 +62,7 @@
           <b-col class="p-0 my-4">
             <div class="blog-banner-container border shadow">
               <img class="blog-banner" loading="lazy"
-                src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Puzzle_Blanc.jpg" alt="" />
+                src="/img/home/puzzle.jpg" alt="" />
               <h2 class="blog-title text-dd-shadow text-dd-primary p-2 rounded">
                 Seu site altamente personalizável e de fácil manutenção!
               </h2>
@@ -83,10 +83,14 @@ export default {
   data() {
     return {
       banners: [
-        "https://upload.wikimedia.org/wikipedia/commons/d/d7/San_Francisco_Bay_Bridge_Western_Span_at_night.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/9/96/Dai_Stanton%27s_home_studio_2009-03-07.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/1/11/Interpreting_Ecommerce_Website_Analytics.jpg",
-        "https://upload.wikimedia.org/wikipedia/commons/8/82/74_South_Shore_Mall_Cigarettes%2C_Bay_Shore_NY_1979.jpg",
+        "/img/home/night.jpg",
+        "/img/home/studio.jpg",
+        "/img/home/cigarettes.jpg",
+        "/img/home/dashboard.jpg",
+        // "https://upload.wikimedia.org/wikipedia/commons/d/d7/San_Francisco_Bay_Bridge_Western_Span_at_night.jpg",
+        // "https://upload.wikimedia.org/wikipedia/commons/9/96/Dai_Stanton%27s_home_studio_2009-03-07.jpg",
+        // "https://upload.wikimedia.org/wikipedia/commons/1/11/Interpreting_Ecommerce_Website_Analytics.jpg",
+        // "https://upload.wikimedia.org/wikipedia/commons/8/82/74_South_Shore_Mall_Cigarettes%2C_Bay_Shore_NY_1979.jpg",
       ],
     };
   },
