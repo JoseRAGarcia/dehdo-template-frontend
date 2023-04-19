@@ -72,7 +72,7 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 
-import menu from "./menu";
+import menu from "../fakeDB/menu";
 
 export default {
   data() {

@@ -3,6 +3,9 @@
     <Splash :loaded="loaded" v-if="!layoutReady" />
     <Header v-show="loaded" />
     <Nuxt v-show="loaded" />
+    <b-row>
+      <b-col class="bg-white" style="height: 100px"></b-col>
+    </b-row>
     <Footer v-show="loaded" />
   </b-container>
 </template>

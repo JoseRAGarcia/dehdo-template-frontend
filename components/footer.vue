@@ -1,9 +1,6 @@
 <template>
   <footer>
     <b-row>
-      <b-col style="height: 100px; background: #fff;"></b-col>
-    </b-row>
-    <b-row>
       <b-col class="footer-container bg-dd-primary">        
       </b-col>
     </b-row>
