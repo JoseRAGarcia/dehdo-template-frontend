@@ -87,6 +87,10 @@ export default {
       type: String,
       default: 'slide-left',
     },
+    pauseOnHover: {
+      type: Boolean,
+      default: false,
+    },
   },
   mounted() {
     this.resumeCarousel();
@@ -143,11 +147,15 @@ export default {
     },
 
     pauseCarousel() {
+      if(!this.pauseOnHover) return
+      
       clearInterval(this.carouselInterval);
       this.carouselInterval = null;
     },
 
     resumeCarousel() {
+      if(!this.pauseOnHover) return
+      
       this.pauseCarousel();
       setTimeout(() => {
         if (!this.carouselInterval) {

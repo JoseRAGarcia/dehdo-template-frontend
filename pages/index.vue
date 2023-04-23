@@ -3,12 +3,20 @@
     <b-row>
       <b-col class="p-0">
         <div class="banner-container">
-          <DdCarousel :imgs="banners" :speed="10000" transitionEffect="fade" height="100vh" width="100%"
-            imgContainerStyle="position: fixed;" :imgStyle="
+          <DdCarousel
+            :imgs="banners"
+            :speed="10000"
+            :pauseOnHover="false"
+            transitionEffect="fade"
+            height="100vh"
+            width="100%"
+            imgContainerStyle="position: fixed;"
+            :imgStyle="
               scrollY > 300
                 ? `filter: blur(4px); height: 100%; width: 100%; object-fit: cover;`
                 : 'height: 100%; width: 100%; object-fit: cover;'
-            " />
+            "
+          />
         </div>
       </b-col>
     </b-row>
@@ -18,7 +26,11 @@
         <b-row>
           <b-col class="d-none d-lg-flex bg-dd-light mt-4">
             <div class="content-img-container p-2">
-              <img loading="lazy" src="https://freesvg.org/img/Noun-project-1063.png" alt="" />
+              <img
+                loading="lazy"
+                src="https://freesvg.org/img/Noun-project-1063.png"
+                alt=""
+              />
             </div>
           </b-col>
           <b-col class="col-12 col-lg-8">
@@ -30,8 +42,11 @@
                 voluptatibus. Asperiores hic assumenda rem modi ex officiis non
                 cum quas, in animi nam reiciendis dicta!
               </p>
-              <img class="content-text-box-bg d-flex d-lg-none" src="https://freesvg.org/img/Noun-project-1063.png"
-                alt="" />
+              <img
+                class="content-text-box-bg d-flex d-lg-none"
+                src="https://freesvg.org/img/Noun-project-1063.png"
+                alt=""
+              />
             </div>
           </b-col>
         </b-row>
@@ -39,21 +54,30 @@
         <b-row>
           <b-col class="col-12 col-lg-8">
             <div class="content-text-box p-2 my-4" id="quem-somos">
-              <h2 class="content-title">Seu <strong>Ecommerce</strong>, seu <strong>Blog</strong>, seus
-                <strong>Serviços</strong> e muito mais em um só lugar!</h2>
+              <h2 class="content-title">
+                Seu <strong>Ecommerce</strong>, seu <strong>Blog</strong>, seus
+                <strong>Serviços</strong> e muito mais em um só lugar!
+              </h2>
               <p v-for="(p, index) in 4" :key="index">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Repudiandae aperiam nostrum minima assumenda molestias
                 voluptatibus. Asperiores hic assumenda rem modi ex officiis non
                 cum quas, in animi nam reiciendis dicta!
               </p>
-              <img class="content-text-box-bg d-flex d-lg-none" src="https://freesvg.org/img/gahag-0116832233.png"
-                alt="" />
+              <img
+                class="content-text-box-bg d-flex d-lg-none"
+                src="https://freesvg.org/img/gahag-0116832233.png"
+                alt=""
+              />
             </div>
           </b-col>
           <b-col class="d-none d-lg-flex bg-dd-light">
             <div class="content-img-container p-2">
-              <img loading="lazy" src="https://freesvg.org/img/gahag-0116832233.png" alt="" />
+              <img
+                loading="lazy"
+                src="https://freesvg.org/img/gahag-0116832233.png"
+                alt=""
+              />
             </div>
           </b-col>
         </b-row>
@@ -61,14 +85,18 @@
         <b-row>
           <b-col class="p-0 my-4">
             <div class="blog-banner-container border shadow">
-              <img class="blog-banner" loading="lazy"
-                src="/img/home/puzzle.jpg" alt="" />
+              <img
+                class="blog-banner"
+                loading="lazy"
+                src="/img/home/puzzle.jpg"
+                alt=""
+              />
               <h2 class="blog-title text-dd-shadow text-dd-primary p-2 rounded">
                 Seu site altamente personalizável e de fácil manutenção!
               </h2>
             </div>
           </b-col>
-        </b-row>        
+        </b-row>
       </b-col>
     </b-row>
   </section>
@@ -83,6 +111,7 @@ export default {
   data() {
     return {
       banners: [
+        "/img/home/night-cartoon.jpg",
         "/img/home/night.jpg",
         "/img/home/studio.jpg",
         "/img/home/cigarettes.jpg",
@@ -114,13 +143,7 @@ export default {
   top: 0;
   left: 0;
   pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, .5),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0)
-  );
+  background: rgba(var(--dd-primary-rgb), .6);
 } */
 
 .content-img-container {

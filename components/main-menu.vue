@@ -1,7 +1,7 @@
 <template>
   <div class="h-100 w-100">
     <div
-      class="main-menu d-none d-lg-flex"
+      class="main-menu d-none d-lg-flex text-nowrap"
       :class="
         scrollY < 20 && $route.path === '/'
           ? 'text-dd-shadow'
@@ -72,7 +72,7 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 
-import menu from "../fakeDB/menu";
+import menu from "~/fakeDB/menu";
 
 export default {
   data() {

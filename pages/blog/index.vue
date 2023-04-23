@@ -9,7 +9,7 @@
           <img
             class="blog-banner"
             loading="lazy"
-            src="/img/blog/bruxa.jpg"
+            src="/img/blog/blog-2.jpg"
             alt=""
           />
           <h1 class="blog-title text-dd-shadow text-dd-light p-2 rounded">
@@ -37,12 +37,7 @@
 
       <b-row>
         <b-col class="p-0 p-lg-3 mt-2">
-          <article class="posts-container border rounded shadow overflow-hidden">
-            <b-row>
-              <b-col class="bg-dd-primary d-flex align-items-center justify-content-center text-center">
-                <h3 class="content-title text-white text-uppercase">Últimas postagens</h3>
-              </b-col>              
-            </b-row>
+          <article class="posts-container">
             <b-row>
               <b-col
                 class="col-12 col-lg-6"
@@ -50,7 +45,7 @@
                 :key="post.idPost"
               >
                 <nuxt-link :to="`/post/${post.idPost}`">
-                  <div class="post-card bg-dd-light border rounded shadow m-2">
+                  <div class="post-card bg-dd-light border rounded shadow mx-2 my-4">
                     <div class="post-img-container">
                       <img
                         width="800"
