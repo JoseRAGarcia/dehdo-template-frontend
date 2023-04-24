@@ -25,7 +25,11 @@ export default function () {
 
     document.body.style.setProperty(
         "--dd-secondary",
-        '#ccc'
+        '#a3888b'
+    );
+    document.body.style.setProperty(
+        "--dd-dark",
+        '#313735'
     );
     document.body.style.setProperty(
         "--dd-warning",

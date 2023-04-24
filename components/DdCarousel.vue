@@ -153,9 +153,7 @@ export default {
       this.carouselInterval = null;
     },
 
-    resumeCarousel() {
-      if(!this.pauseOnHover) return
-      
+    resumeCarousel() {      
       this.pauseCarousel();
       setTimeout(() => {
         if (!this.carouselInterval) {

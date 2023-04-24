@@ -6,7 +6,6 @@
           <DdCarousel
             :imgs="banners"
             :speed="10000"
-            :pauseOnHover="false"
             transitionEffect="fade"
             height="100vh"
             width="100%"
@@ -111,6 +110,7 @@ export default {
   data() {
     return {
       banners: [
+        "/img/home/ecommerce.jpg",
         "/img/home/night-cartoon.jpg",
         "/img/home/night.jpg",
         "/img/home/studio.jpg",

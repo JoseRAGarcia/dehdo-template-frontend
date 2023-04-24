@@ -41,12 +41,17 @@
             <b-row>
               <b-col
                 class="col-12 col-lg-6"
-                v-for="post in posts"
+                v-for="post in loadingPosts ? 4 : posts"
                 :key="post.idPost"
               >
                 <nuxt-link :to="`/post/${post.idPost}`">
-                  <div class="post-card bg-dd-light border rounded shadow mx-2 my-4">
-                    <div class="post-img-container">
+                  <div
+                    class="post-card bg-dd-light border rounded shadow mx-2 my-4"
+                  >
+                    <div
+                      class="post-img-container"
+                      :class="{ skeleton: loadingPosts }"
+                    >
                       <img
                         width="800"
                         height="560"
@@ -57,14 +62,30 @@
                     <div class="post-content p-2">
                       <b-row>
                         <b-col>
-                          <h4 class="content-title post-title">
+                          <div
+                            v-if="loadingPosts"
+                            class="skeleton skeleton-text w-50 mb-2"
+                          ></div>
+                          <h4 v-else class="content-title post-title">
                             {{ post.title }}
                           </h4>
                         </b-col>
                       </b-row>
                       <b-row>
                         <b-col class="post-text">
-                          {{ post.content.slice(0, 255) }}...
+                          <div v-if="loadingPosts">
+                            <div
+                              class="skeleton skeleton-text w-100 mb-1"
+                            ></div>
+                            <div
+                              class="skeleton skeleton-text w-100 mb-1"
+                            ></div>
+                            <div
+                              class="skeleton skeleton-text w-100 mb-1"
+                            ></div>
+                            <div class="skeleton skeleton-text w-50"></div>
+                          </div>
+                          <p v-else>{{ post.content.slice(0, 255) }}...</p>
                         </b-col>
                       </b-row>
                     </div>
@@ -82,14 +103,26 @@
 <script>
 import { mapGetters } from "vuex";
 
-import posts from "~/fakeDB/posts";
+import fakePosts from "~/fakeDB/posts";
 
 export default {
   name: "blog",
 
+  mounted() {
+    this.$fetch();
+  },
+
+  async fetch() {
+    this.listPosts();
+  },
+
   data() {
     return {
-      posts,
+      fakePosts,
+
+      loadingPosts: false,
+
+      posts: [],
     };
   },
 
@@ -97,6 +130,17 @@ export default {
     ...mapGetters({
       scrollY: "window/getScrollY",
     }),
+  },
+
+  methods: {
+    listPosts() {
+      this.loadingPosts = true;
+
+      setTimeout(() => {
+        this.posts = Array.from(this.fakePosts);
+        this.loadingPosts = false;
+      }, 1500);
+    },
   },
 };
 </script>
