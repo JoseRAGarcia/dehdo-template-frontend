@@ -12,6 +12,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap' },
       { rel: 'stylesheet', href: 'https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' },
       { rel: 'icon', type: 'image/x-icon', href: '/img/dehdo-icon.png' }
     ]
