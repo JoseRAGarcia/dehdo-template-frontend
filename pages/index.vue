@@ -23,7 +23,7 @@
     <b-row>
       <b-col class="bg-white">
         <b-row>
-          <b-col class="d-none d-lg-flex bg-dd-light mt-4">
+          <b-col class="d-none d-lg-flex align-items-center justify-content-center bg-dd-light mt-4">
             <div class="content-img-container p-2">
               <img
                 loading="lazy"
@@ -35,11 +35,32 @@
           <b-col class="col-12 col-lg-8">
             <div class="content-text-box p-2 my-4" id="quem-somos">
               <h2 class="content-title">Quem somos</h2>
-              <p v-for="(p, index) in 4" :key="index">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Repudiandae aperiam nostrum minima assumenda molestias
-                voluptatibus. Asperiores hic assumenda rem modi ex officiis non
-                cum quas, in animi nam reiciendis dicta!
+              <p>
+                Somos uma equipe apaixonada por tecnologia e inovação, que
+                acredita no poder da internet para transformar negócios e
+                conectar pessoas. Com anos de experiência no mercado digital,
+                estamos sempre buscando novas formas de aprimorar nossos
+                serviços e oferecer as melhores soluções para nossos clientes.
+              </p>
+              <p>
+                Aqui, trabalhamos com um processo de desenvolvimento ágil, o que
+                significa que estamos sempre em contato com nossos clientes e
+                adaptando nossas soluções às suas necessidades específicas. Isso
+                nos permite criar sites e aplicativos personalizados, que
+                atendem às demandas de cada cliente e oferecem uma experiência
+                única aos usuários.
+              </p>
+              <p>
+                Nosso objetivo é ajudar nossos clientes a alcançar o sucesso
+                online, seja por meio de um ecommerce bem-sucedido, um blog de
+                destaque ou um sistema eficiente de agendamento de serviços. Se
+                você está procurando uma equipe confiável e comprometida em
+                ajudá-lo a alcançar seus objetivos online, você está no lugar
+                certo.
+              </p>
+              <p>
+                Obrigado por visitar nosso site. Estamos ansiosos para trabalhar
+                com você e ajudá-lo a alcançar o sucesso online!
               </p>
               <img
                 class="content-text-box-bg d-flex d-lg-none"
@@ -57,11 +78,46 @@
                 Seu <strong>Ecommerce</strong>, seu <strong>Blog</strong>, seus
                 <strong>Serviços</strong> e muito mais em um só lugar!
               </h2>
-              <p v-for="(p, index) in 4" :key="index">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Repudiandae aperiam nostrum minima assumenda molestias
-                voluptatibus. Asperiores hic assumenda rem modi ex officiis non
-                cum quas, in animi nam reiciendis dicta!
+              <p>
+                <strong>Desenvolvimento de Ecommerce:</strong> Nós ajudamos
+                nossos clientes a criar lojas virtuais de sucesso, fornecendo
+                soluções personalizadas e eficazes para atender às suas
+                necessidades específicas. Desenvolvemos sites de ecommerce
+                responsivos, intuitivos e fáceis de usar, com recursos avançados
+                como carrinho de compras, pagamento seguro, gerenciamento de
+                inventário, integração com redes sociais e muito mais. Nossa
+                equipe de especialistas em marketing digital pode ajudá-lo a
+                criar campanhas de publicidade online para promover sua loja
+                virtual e aumentar suas vendas.
+              </p>
+              <p>
+                <strong>Desenvolvimento de Blog:</strong> Criar um blog de
+                sucesso pode ser um grande desafio, mas nós estamos aqui para
+                ajudar. Oferecemos soluções de desenvolvimento de blog
+                personalizadas, que incluem design atraente e moderno,
+                otimização para mecanismos de busca (SEO), integração com redes
+                sociais, comentários e recursos avançados de gerenciamento de
+                conteúdo. Nossa equipe de redatores e editores pode ajudá-lo a
+                criar conteúdo relevante e envolvente, que atrai mais tráfego
+                para seu blog e aumenta sua visibilidade online.
+              </p>
+              <p>
+                <strong>Agendamento de Serviços:</strong> Se você é um
+                profissional que oferece serviços, sabe o quão importante é
+                gerenciar sua agenda de forma eficiente. Nós oferecemos soluções
+                de agendamento de serviços personalizadas, que permitem que você
+                gerencie sua agenda de forma fácil e eficiente. Com nosso
+                sistema de agendamento online, seus clientes podem marcar e
+                gerenciar seus próprios horários, reduzindo o tempo gasto em
+                tarefas administrativas e aumentando a satisfação do cliente.
+              </p>
+              <p>
+                Esses são apenas alguns dos serviços que oferecemos. Nosso
+                objetivo é ajudar nossos clientes a alcançar o sucesso online,
+                seja por meio de uma loja virtual de sucesso, um blog envolvente
+                ou um sistema eficiente de agendamento de serviços. Se você está
+                procurando uma equipe confiável e comprometida em ajudá-lo a
+                alcançar seus objetivos online, você está no lugar certo.
               </p>
               <img
                 class="content-text-box-bg d-flex d-lg-none"
@@ -70,7 +126,7 @@
               />
             </div>
           </b-col>
-          <b-col class="d-none d-lg-flex bg-dd-light">
+          <b-col class="d-none d-lg-flex align-items-center justify-content-center bg-dd-light">
             <div class="content-img-container p-2">
               <img
                 loading="lazy"
@@ -161,7 +217,7 @@ export default {
 
 .content-text-box {
   position: relative;
-  height: 400px;
+  min-height: 400px;
   overflow: hidden;
 }
 
