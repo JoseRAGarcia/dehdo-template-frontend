@@ -1,18 +1,21 @@
 <template>
-  <div class="carousel-container" :style="`width: ${width}; height: ${height};`">
+  <div
+    class="carousel-container"
+    :style="`width: ${width}; height: ${height};`"
+  >
     <div
       class="carousel-img-container"
       :style="imgContainerStyle"
       v-for="(img, index) in imgs"
       :key="index"
-      @mouseover="pauseCarousel"
-      @mouseleave="resumeCarousel"
+      @mouseover="setPauseCarousel"
+      @mouseleave="setResumeCarousel"
     >
       <Transition :name="transitionEffect">
         <img
           loading="lazy"
           v-if="carouselIndex === index"
-          class="carousel-img"          
+          class="carousel-img"
           :src="img"
           :style="imgStyle"
           alt=""
@@ -20,10 +23,18 @@
       </Transition>
     </div>
 
-    <div v-show="imgs.length > 1 && arrows" class="img-controls prev-img" @click="prevImg">
+    <div
+      v-show="imgs.length > 1 && arrows"
+      class="img-controls prev-img"
+      @click="prevImg"
+    >
       <i class="bx bx-md bx-chevron-left"></i>
     </div>
-    <div v-show="imgs.length > 1 && arrows" class="img-controls next-img" @click="nextImg">
+    <div
+      v-show="imgs.length > 1 && arrows"
+      class="img-controls next-img"
+      @click="nextImg"
+    >
       <i class="bx bx-md bx-chevron-right"></i>
     </div>
     <div v-show="imgs.length > 1 && dots" class="img-controls img-dots">
@@ -57,11 +68,11 @@ export default {
     },
     width: {
       type: String,
-      default: '100%',
+      default: "100%",
     },
     height: {
       type: String,
-      default: '500px',
+      default: "500px",
     },
     arrows: {
       type: Boolean,
@@ -73,19 +84,19 @@ export default {
     },
     carouselStyle: {
       type: String,
-      default: '',
+      default: "",
     },
     imgContainerStyle: {
       type: String,
-      default: '',
+      default: "",
     },
     imgStyle: {
       type: String,
-      default: '',
+      default: "",
     },
     transitionEffect: {
       type: String,
-      default: 'slide-left',
+      default: "slide-left",
     },
     pauseOnHover: {
       type: Boolean,
@@ -110,9 +121,9 @@ export default {
 
   watch: {
     speed: function () {
-        this.resumeCarousel()
+      this.resumeCarousel();
     },
-  },  
+  },
 
   methods: {
     autoChangeImg() {
@@ -146,14 +157,24 @@ export default {
       this.resumeCarousel();
     },
 
+    setPauseCarousel() {
+      if (!this.pauseOnHover) return;
+
+      this.pauseCarousel();
+    },
+
+    setResumeCarousel() {
+      if (!this.pauseOnHover) return;
+
+      this.resumeCarousel();
+    },
+
     pauseCarousel() {
-      if(!this.pauseOnHover) return
-      
       clearInterval(this.carouselInterval);
       this.carouselInterval = null;
     },
 
-    resumeCarousel() {      
+    resumeCarousel() {
       this.pauseCarousel();
       setTimeout(() => {
         if (!this.carouselInterval) {
@@ -181,7 +202,7 @@ export default {
 }
 .carousel-img {
   max-height: 100%;
-  max-width: 100%;  
+  max-width: 100%;
 }
 .img-controls {
   position: absolute;
