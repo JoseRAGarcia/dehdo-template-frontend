@@ -168,7 +168,8 @@ export default {
       banners: [
         "/img/ecommerce/ecommerce.jpg",
         "/img/blog/blog.jpg",
-        "/img/others/night-cartoon.jpg",
+        "/img/scheduling/scheduling.jpg",
+        "/img/service/service.jpg",        
         // "/img/others/night.jpg",
         // "/img/others/studio.jpg",
         // "/img/others/cigarettes.jpg",
