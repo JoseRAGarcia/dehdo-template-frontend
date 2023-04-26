@@ -9,7 +9,7 @@
           <img
             class="blog-banner"
             loading="lazy"
-            src="/img/blog/blog-2.jpg"
+            src="/img/blog/blog.jpg"
             alt=""
           />
           <h1 class="blog-title text-dd-shadow text-dd-light p-2 rounded">

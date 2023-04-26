@@ -143,7 +143,7 @@
               <img
                 class="blog-banner"
                 loading="lazy"
-                src="/img/home/puzzle.jpg"
+                src="/img/others/puzzle.jpg"
                 alt=""
               />
               <h2 class="blog-title text-dd-shadow text-dd-primary p-2 rounded">
@@ -166,12 +166,13 @@ export default {
   data() {
     return {
       banners: [
-        "/img/home/ecommerce.jpg",
-        "/img/home/night-cartoon.jpg",
-        "/img/home/night.jpg",
-        "/img/home/studio.jpg",
-        "/img/home/cigarettes.jpg",
-        "/img/home/dashboard.jpg",
+        "/img/ecommerce/ecommerce.jpg",
+        "/img/blog/blog.jpg",
+        "/img/others/night-cartoon.jpg",
+        // "/img/others/night.jpg",
+        // "/img/others/studio.jpg",
+        // "/img/others/cigarettes.jpg",
+        // "/img/others/dashboard.jpg",
         // "https://upload.wikimedia.org/wikipedia/commons/d/d7/San_Francisco_Bay_Bridge_Western_Span_at_night.jpg",
         // "https://upload.wikimedia.org/wikipedia/commons/9/96/Dai_Stanton%27s_home_studio_2009-03-07.jpg",
         // "https://upload.wikimedia.org/wikipedia/commons/1/11/Interpreting_Ecommerce_Website_Analytics.jpg",
