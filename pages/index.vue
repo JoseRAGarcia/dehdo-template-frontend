@@ -27,7 +27,7 @@
             <div class="content-img-container p-2">
               <img
                 loading="lazy"
-                src="https://freesvg.org/img/Noun-project-1063.png"
+                src="/img/others/gears.png"
                 alt=""
               />
             </div>
@@ -64,7 +64,7 @@
               </p>
               <img
                 class="content-text-box-bg d-flex d-lg-none"
-                src="https://freesvg.org/img/Noun-project-1063.png"
+                src="/img/others/gears.png"
                 alt=""
               />
             </div>
@@ -229,7 +229,7 @@ export default {
   right: 0;
   max-height: 50%;
   max-width: 50%;
-  filter: opacity(0.07);
+  filter: opacity(0.3);
 }
 
 .blog-banner-container {

@@ -34,6 +34,11 @@
       <b-col class="sub-footer-container p-2 text-dd-primary">
         <b-container>
           <b-row>
+            <b-col class="d-flex align-items-center justify-content-center text-center">
+              <a class="dd-link" target="blank" href="https://br.freepik.com">Imagens do site Freepik</a>
+            </b-col>
+          </b-row>
+          <b-row>
             <b-col
               class="col-12 col-md-8 col-lg-6 d-flex align-items-center justify-content-center text-center"
             >
@@ -45,24 +50,27 @@
             <b-col
               class="col-12 col-md-4 col-lg-6 d-flex align-items-center justify-content-center"
             >
-              <span class="dd-link" @click="changeShowModal('politicas-privacidade')">Políticas de Privacidade</span>
+              <span
+                class="dd-link"
+                @click="changeShowModal('politicas-privacidade')"
+                >Políticas de Privacidade</span
+              >
             </b-col>
-          </b-row>
+          </b-row>          
         </b-container>
       </b-col>
-    </b-row>    
+    </b-row>
   </footer>
 </template>
 
 <script>
-import {mapActions} from 'vuex'
+import { mapActions } from "vuex";
 export default {
-
   methods: {
     ...mapActions({
-      changeShowModal: 'modal/changeShowModal',
+      changeShowModal: "modal/changeShowModal",
     }),
-  }
+  },
 };
 </script>
 
